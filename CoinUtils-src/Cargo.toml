@@ -3,10 +3,10 @@ name = "coinutils-src"
 version = "0.1.0+2.11.6"
 edition = "2021"
 build = "build.rs"
-license-file = "../LICENSE"
+license-file = "../LICENSE.md"
 description = "Build CoinUtils as a crate."
 repository = "https://github.com/Maroon502/CoinUtils-src"
-keywords = ["coin-or", "CoinUtils", "CoinUtils-src", "CoinUtils-sys"]
+keywords = ["coin-or", "CoinUtils", "CoinUtils-src"]
 readme = "../README.md"
 authors = [
     "Maroon"
