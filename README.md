@@ -73,7 +73,7 @@ you can compile it for the other target by providing the `--target` option to
 
 Your contribution is highly appreciated. Do not hesitate to open an issue or a
 pull request. Note that any contribution submitted for inclusion in the project
-will be licensed according to the terms given in [LICENSE](LICENSE).
+will be licensed according to the terms given in [LICENSE](license-url).
 
 [CoinUtils]: https://github.com/coin-or/CoinUtils
 [vcpkg]: https://github.com/Microsoft/vcpkg
@@ -82,6 +82,5 @@ will be licensed according to the terms given in [LICENSE](LICENSE).
 [documentation-url]: https://docs.rs/coinutils-src
 [package-img]: https://img.shields.io/crates/v/coinutils-src.svg
 [package-url]: https://crates.io/crates/coinutils-src
-[LICENSE]: https://github.com/Maroon502/coinutils-src/blob/master/LICENSE
 [license-img]: https://img.shields.io/crates/l/coinutils-src.svg
-[license-url]: https://github.com/Maroon502/coinutils-src/blob/master/LICENSE
+[license-url]: https://github.com/Maroon502/coinutils-src/blob/master/LICENSE.md
