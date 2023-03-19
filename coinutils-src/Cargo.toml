@@ -14,8 +14,8 @@ authors = [
 ]
 
 exclude = [
-   "CoinUtils/**/*",
-   "!CoinUtils/CoinUtils/src/**/*",
+   "coinutils/**/*",
+   "!coinutils/CoinUtils/src/**/*",
    "!**/LICENSE",
    "!**/AUTHORS",
 ]
