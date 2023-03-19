@@ -4,10 +4,10 @@ use std::process::Command;
 
 use pkg_config;
 
-const LIB_NAME: &str = "CoinUtils";
+const LIB_NAME: &str = "coinutils";
 
 fn main() {
-    println!("cargo:rerun-if-changed=CoinUtils_lib_sources.txt");
+    println!("cargo:rerun-if-changed=coinutils_lib_sources.txt");
     println!("cargo:rerun-if-changed={}_STATIC", LIB_NAME.to_ascii_uppercase());
 
     if cfg!(feature = "system") {
@@ -84,7 +84,7 @@ fn build_lib_and_link() {
 
     let includes_dir = vec![src_dir.clone()];
 
-    let lib_sources = include_str!("CoinUtils_lib_sources.txt")
+    let lib_sources = include_str!("coinutils_lib_sources.txt")
         .trim()
         .split('\n')
         .map(|file| format!("{}/{}", src_dir, file.trim()))
@@ -97,7 +97,7 @@ fn build_lib_and_link() {
     config.includes(includes_dir);
     config.files(lib_sources);
 
-    config.compile("CoinUtils");
+    config.compile("coinutils");
 }
 
 fn link_lib_system(lib_name: &str) -> bool {
