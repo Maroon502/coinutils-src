@@ -1,8 +1,4 @@
-[submodule "coinutils-src/coinutils"]
-	path = coinutils-src/coinutils
-	url = https://github.com/coin-or/CoinUtils.git
-	branch = releases/2.11.6
-[submodule "coinutils-src/CoinUtils"]
-	path = coinutils-src/CoinUtils
+[submodule "CoinUtils"]
+	path = CoinUtils
 	url = https://github.com/coin-or/CoinUtils.git
 	branch = releases/2.11.6
