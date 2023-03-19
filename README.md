@@ -16,8 +16,12 @@ coinutils-src = "0.1"
 
 The following Cargo features are supported:
 
-* `static` to link to CoinUtils statically, and
+* `static` to link to CoinUtils statically;
 * `system` to skip building the bundled CoinUtils.
+
+The following environment variables are supported:
+
+* `COINUTILS_STATIC` to link to CoinUtils statically;
 
 ## Windows and vcpkg
 

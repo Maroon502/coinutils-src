@@ -1,21 +1,23 @@
 [package]
 name = "coinutils-src"
-version = "0.1.0+2.11.6"
+version = "0.1.1+2.11.6"
 edition = "2021"
 build = "build.rs"
-license-file = "../LICENSE.md"
+links = "CoinUtils"
+license = "Apache-2.0"
 description = "Build CoinUtils as a crate."
-repository = "https://github.com/Maroon502/CoinUtils-src"
+repository = "https://github.com/Maroon502/coinutils-src"
 keywords = ["coin-or", "CoinUtils", "CoinUtils-src"]
 readme = "../README.md"
 authors = [
     "Maroon"
 ]
+
 exclude = [
-    "CoinUtils/**/*",
-    "!CoinUtils/CoinUtils/src/**/*",
-    "!**/LICENSE",
-    "!**/AUTHORS",
+   "CoinUtils/**/*",
+   "!CoinUtils/CoinUtils/src/**/*",
+   "!**/LICENSE",
+   "!**/AUTHORS",
 ]
 
 [features]
@@ -28,3 +30,4 @@ static = []
 [build-dependencies]
 cc = "1.0"
 vcpkg = "0.2"
+pkg-config = "0.3"
