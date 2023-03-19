@@ -3,7 +3,7 @@ name = "coinutils-src"
 version = "0.1.1+2.11.6"
 edition = "2021"
 build = "build.rs"
-links = "coinutils"
+links = "CoinUtils"
 license = "Apache-2.0"
 description = "Build CoinUtils as a crate."
 repository = "https://github.com/Maroon502/coinutils-src"
@@ -14,8 +14,8 @@ authors = [
 ]
 
 exclude = [
-   "coinutils/**/*",
-   "!coinutils/CoinUtils/src/**/*",
+   "CoinUtils/**/*",
+   "!CoinUtils/CoinUtils/src/**/*",
    "!**/LICENSE",
    "!**/AUTHORS",
 ]
