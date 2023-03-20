@@ -2,7 +2,9 @@
 
 [![Package][package-img]][package-url] [![Documentation][documentation-img]][documentation-url] [![License][license-img]][license-url]
 
-The package provides a source of [CoinUtils].
+The package provides Low-level bindings to the [CoinUtils] library.
+
+CoinUtils is an open-source collection of classes and helper functions that are generally useful to multiple COIN-OR projects.
 
 ## Usage
 Just add the following to your `Cargo.toml`:
@@ -14,21 +16,20 @@ coinutils-src = "0.1"
 
 ## Configuration
 
-The following Cargo features are supported:
+The package build from the source and link statically by default. It also provide the following environment variables to allow users to link to system library customly:
 
-* `static` to link to CoinUtils statically;
-* `system` to skip building the bundled CoinUtils.
+* `CARGO_COINUTILS_STATIC` to link to CoinUtils statically;
+* `CARGO_COINUTILS_SYSTEM` to link to CoinUtils system library;
 
-The following environment variables are supported:
-
-* `COINUTILS_STATIC` to link to CoinUtils statically;
+Set the environment variable to `1` to enable the feature. For example, to link to system library dynamically, set `CARGO_${LIB_NAME}_SYSTEM` to `1`; to link to system library statically, set both `CARGO_${LIB_NAME}_SYSTEM` and `CARGO_${LIB_NAME}_STATIC` to `1`.
 
 ## Windows and vcpkg
 
-On Windows, `coinutils-src` relies on [vcpkg] to find CoinUtils. Before building,
-you must have the correct CoinUtils installed for your target triplet and kind of
-linking. For instance, to link dynamically for the `x86_64-pc-windows-msvc`
-toolchain, install `coinutils` for the `x64-windows` triplet:
+On Windows, if `${LIB_NAME}_SYSTEM` is set to `1`, `coinutils-src` will use 
+[vcpkg] to find CoinUtils. Before building, you must have the correct CoinUtils 
+installed for your target triplet and kind of linking. For instance,
+to link dynamically for the `x86_64-pc-windows-msvc` toolchain, install
+ `coinutils` for the `x64-windows` triplet:
 
 ```sh
 vcpkg install coinutils --triplet x64-windows
