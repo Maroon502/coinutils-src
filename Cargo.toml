@@ -5,12 +5,12 @@ edition = "2021"
 build = "build.rs"
 links = "CoinUtils"
 license = "Apache-2.0"
-description = "Build CoinUtils as a crate."
-repository = "https://github.com/Maroon502/coinutils-src"
+description = "The low-level bindings to the COIN-OR CoinUtils library."
+repository = "https://github.com/Maroon502/coinutils-src.git"
 keywords = ["coin-or", "CoinUtils", "CoinUtils-src"]
 readme = "README.md"
 authors = [
-    "Maroon"
+    "Maroon502<maroon502@outlook.com>"
 ]
 
 exclude = [
@@ -22,12 +22,9 @@ exclude = [
 
 [features]
 default = []
-system = []
-static = []
 
 [dependencies]
 
 [build-dependencies]
 cc = "1.0"
-vcpkg = "0.2"
-pkg-config = "0.3"
+coin-build-tools = { git = "https://github.com/Maroon502/coin-build-tools.git" }
