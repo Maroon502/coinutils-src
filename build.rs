@@ -10,17 +10,21 @@ fn main() {
     println!("cargo:rerun-if-env-changed=CARGO_{}_STATIC", LIB_NAME.to_ascii_uppercase());
     println!("cargo:rerun-if-env-changed=CARGO_{}_SYSTEM", LIB_NAME.to_ascii_uppercase());
 
-    link::link_lib_system_if_defined(LIB_NAME);
+    let want_system = utils::want_system(LIB_NAME);
 
-    if !Path::new(&format!("{}/AUTHORS", LIB_NAME)).exists() {
+    if want_system && link::link_lib_system_if_supported(LIB_NAME) {
+        let coinflags = vec!["COINUTILS".to_string()];
+        coinbuilder::print_metedata(Vec::new(), coinflags);     
+        return;
+    }
+
+    if !Path::new(&format!("{}/LICENSE", LIB_NAME)).exists() {
         utils::update_submodules(env::var("CARGO_MANIFEST_DIR").unwrap());
     }
     build_lib_and_link();
 }
 
 fn build_lib_and_link() {
-    let mut config = coinbuilder::init_builder();
-
     let src_dir = format!(
         "{}",
         PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap())
@@ -43,6 +47,7 @@ fn build_lib_and_link() {
 
     coinbuilder::print_metedata(includes_dir.clone(), coinflags.clone());
 
+    let mut config = coinbuilder::init_builder();
     coinflags.iter().for_each(|flag| {
         config.define(&format!("COIN_HAS_{}", flag), None);
     });
