@@ -1,20 +1,29 @@
 use std::env;
 use std::path::{Path, PathBuf};
 
-use coin_build_tools::{utils, link, coinbuilder};
+use coin_build_tools::{coinbuilder, link, utils};
 
 const LIB_NAME: &str = "CoinUtils";
 
 fn main() {
-    println!("cargo:rerun-if-changed={}_lib_sources.txt", LIB_NAME.to_ascii_lowercase());
-    println!("cargo:rerun-if-env-changed=CARGO_{}_STATIC", LIB_NAME.to_ascii_uppercase());
-    println!("cargo:rerun-if-env-changed=CARGO_{}_SYSTEM", LIB_NAME.to_ascii_uppercase());
+    println!(
+        "cargo:rerun-if-changed={}_lib_sources.txt",
+        LIB_NAME.to_ascii_lowercase()
+    );
+    println!(
+        "cargo:rerun-if-env-changed=CARGO_{}_STATIC",
+        LIB_NAME.to_ascii_uppercase()
+    );
+    println!(
+        "cargo:rerun-if-env-changed=CARGO_{}_SYSTEM",
+        LIB_NAME.to_ascii_uppercase()
+    );
 
     let want_system = utils::want_system(LIB_NAME);
 
     if want_system && link::link_lib_system_if_supported(LIB_NAME) {
         let coinflags = vec!["COINUTILS".to_string()];
-        coinbuilder::print_metedata(Vec::new(), coinflags);     
+        coinbuilder::print_metedata(Vec::new(), coinflags);
         return;
     }
 
@@ -28,14 +37,13 @@ fn build_lib_and_link() {
     let src_dir = format!(
         "{}",
         PathBuf::from(env::var("CARGO_MANIFEST_DIR").unwrap())
-        .join(LIB_NAME)
-        .join(LIB_NAME)
-        .join("src")
-        .display());
+            .join(LIB_NAME)
+            .join(LIB_NAME)
+            .join("src")
+            .display()
+    );
 
-    let includes_dir = vec![
-        src_dir.clone()
-    ];
+    let includes_dir = vec![src_dir.clone()];
 
     let lib_sources = include_str!("coinutils_lib_sources.txt")
         .trim()
@@ -55,5 +63,4 @@ fn build_lib_and_link() {
     config.files(lib_sources);
 
     config.compile(LIB_NAME);
-
 }
