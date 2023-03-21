@@ -1,11 +1,12 @@
 [package]
 name = "coinutils-src"
-version = "0.1.1+2.11.6"
+version = "0.2.0+2.11.6"
 edition = "2021"
 build = "build.rs"
 links = "CoinUtils"
 license = "Apache-2.0"
 description = "The low-level bindings to the COIN-OR CoinUtils library."
+documentation = "https://docs.rs/coinutils-src/"
 repository = "https://github.com/Maroon502/coinutils-src.git"
 keywords = ["coin-or", "CoinUtils", "CoinUtils-src"]
 readme = "README.md"
@@ -27,4 +28,4 @@ default = []
 
 [build-dependencies]
 cc = "1.0"
-coin-build-tools = { git = "https://github.com/Maroon502/coin-build-tools.git" }
+coin-build-tools = "0.2"
