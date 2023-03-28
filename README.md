@@ -13,7 +13,7 @@ Just add the following to your `Cargo.toml`:
 
 ```toml
 [dependencies]
-coinutils-src = "0.1"
+coinutils-src = "0.2"
 ```
 
 ## Configuration
