@@ -2,7 +2,9 @@
 
 [![Package][package-img]][package-url] [![Documentation][documentation-img]][documentation-url] [![License][license-img]][license-url]
 
-The package provides Low-level bindings to the [CoinUtils] library.
+CoinUtils-src crate is a *-src crate. This links CoinUtils libraries to executable build by cargo, but does not provide Rust bindings.
+
+By this package, you don't need to worry about installing CoinUtils in the system, and it's a package for **all platforms**.
 
 CoinUtils is an open-source collection of classes and helper functions that are generally useful to multiple COIN-OR projects.
 
