@@ -16,6 +16,13 @@ Just add the following to your `Cargo.toml`:
 coinutils-src = "0.2"
 ```
 
+This package does not provide bindings. Please use [coincbc-sys], [coinclp-sys] to use Cbc, Clp, e.g.
+
+```toml
+[dependencies]
+coincbc-sys = { version = "0.2" }
+```
+
 ## Configuration
 
 The package build from the source and link statically by default. It also provide the following environment variables to allow users to link to system library customly:
@@ -83,6 +90,10 @@ pull request. Note that any contribution submitted for inclusion in the project
 will be licensed according to the terms given in [LICENSE](license-url).
 
 [CoinUtils]: https://github.com/coin-or/CoinUtils
+
+[coincbc-sys]: https://github.com/Maroon502/coincbc-sys
+[coinclp-sys]: https://github.com/Maroon502/coinclp-sys
+
 [vcpkg]: https://github.com/Microsoft/vcpkg
 
 [documentation-img]: https://docs.rs/coinutils-src/badge.svg
