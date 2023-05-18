@@ -17,6 +17,6 @@ jobs:
         with:
           # (Optional) Path to changelog.
         #   changelog: CHANGELOG.md
-          title: releases/v$tag
+          title: v$tag
           # (Required) GitHub token for creating GitHub Releases.
           token: ${{ secrets.GITHUB_TOKEN }}
