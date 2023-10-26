@@ -6,7 +6,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.2.5+2.11.9](https://github.com/Maroon502/coinutils-src/compare/v0.2.4+2.11.9...v0.2.5+2.11.9) - 2023-10-26
+## [0.2.5+2.11.10](https://github.com/Maroon502/coinutils-src/compare/v0.2.4+2.11.9...v0.2.5+2.11.9) - 2023-10-26
+
+### Other
+- Update CoinUtils from 0.108.8 to 0.108.9
+
+## [0.2.4+2.11.9](https://github.com/Maroon502/coinutils-src/compare/v0.1.0+2.11.6...v0.2.5+2.11.9) - 2023-05-18
 
 ### Added
 - add flags to system lib
@@ -18,7 +23,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - change rerun-if flag
 
 ### Other
-- Update CoinUtils from 0.108.8 to 0.108.9
 - update workflow
 - test
 - test
