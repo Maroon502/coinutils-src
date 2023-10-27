@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.6+2.11.10](https://github.com/Maroon502/coinutils-src/compare/v0.2.5+2.11.10...v0.2.6+2.11.10) - 2023-10-27
+
+### Other
+- Update CI
+- Bump actions/checkout from 3 to 4
+- Update CI
+- *(deps)* change cc to parallel version
+- Update docs
+
 ## [0.2.5+2.11.10](https://github.com/Maroon502/coinutils-src/compare/v0.2.4+2.11.9...v0.2.5+2.11.10) - 2023-10-26
 
 ### Other
