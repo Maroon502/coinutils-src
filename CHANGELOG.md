@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.7+2.11.10](https://github.com/Maroon502/coinutils-src/compare/v0.2.6+2.11.10...v0.2.7+2.11.10) - 2024-01-28
+
+### Other
+- Update Action
+- Update ActionUpdate Action
+- Update Action
+- update Action
+- update Action
+
 ## [0.2.6+2.11.10](https://github.com/Maroon502/coinutils-src/compare/v0.2.5+2.11.10...v0.2.6+2.11.10) - 2023-10-27
 
 ### Change
