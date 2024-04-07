@@ -6,29 +6,29 @@ CoinUtils-src crate is a *-src crate. This links CoinUtils libraries to executab
 
 By this package, you don't need to worry about installing CoinUtils in the system, and it's a package for **all platforms**.
 
-CoinUtils is an open-source collection of classes and helper functions that are generally useful to multiple COIN-OR projects.
+[CoinUtils] is an open-source collection of classes and helper functions that are generally useful to multiple COIN-OR projects.
 
 ## Usage
 
 1. Add the following to your `Cargo.toml`:
 
-```toml
-[dependencies]
-coinutils-src = "0.2"
-```
+    ```toml
+    [dependencies]
+    coinutils-src = "0.2"
+    ```
 
 2. Add the following to your `lib.rs`:
 
-```toml
-extern crate coinutils_src;
-```
+    ```toml
+    extern crate coinutils_src;
+    ```
 
-This package does not provide bindings. Please use [coincbc-sys], [coinclp-sys] to use Cbc, Clp, e.g.
+    This package does not provide bindings. Please use [coincbc-sys], [coinclp-sys] to use Cbc, Clp, e.g.
 
-```toml
-[dependencies]
-coincbc-sys = { version = "0.2" }
-```
+    ```toml
+    [dependencies]
+    coincbc-sys = { version = "0.2" }
+    ```
 
 ## Configuration
 
@@ -65,7 +65,7 @@ vcpkg install coinutils --triplet x64-windows-static
 
 and build with `+crt-static` option
 
-```
+```sh
 RUSTFLAGS='-C target-feature=+crt-static' cargo build --target x86_64-pc-windows-msvc
 ```
 
@@ -74,8 +74,7 @@ Please see the ["Static and dynamic C runtimes" in The Rust reference](https://d
 ## Cross Compilation
 
 you can compile it for the other target by providing the `--target` option to 
-`cargo build`. 
-
+`cargo build`.
 
 | Target                               |  supported  |
 |--------------------------------------|:-----------:|
