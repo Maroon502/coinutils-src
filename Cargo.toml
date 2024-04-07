@@ -1,6 +1,6 @@
 [package]
 name = "coinutils-src"
-version = "0.2.6+2.11.10"
+version = "0.2.8+2.11.11"
 edition = "2021"
 build = "build.rs"
 links = "CoinUtils"
