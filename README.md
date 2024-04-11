@@ -2,7 +2,7 @@
 
 [![Package][package-img]][package-url] [![Documentation][documentation-img]][documentation-url] [![License][license-img]][license-url]
 
-CoinUtils-src crate is a *-src crate. This links CoinUtils libraries to executable build by cargo, but does not provide Rust bindings.
+`CoinUtils-src` crate is a *-src crate. This links CoinUtils libraries to executable build by cargo, but does not provide Rust bindings.
 
 By this package, you don't need to worry about installing CoinUtils in the system, and it's a package for **all platforms**.
 
@@ -14,7 +14,7 @@ By this package, you don't need to worry about installing CoinUtils in the syste
 
     ```toml
     [dependencies]
-    coinutils-src = "0.2"
+    coinutils-src = "\*"
     ```
 
 2. Add the following to your `lib.rs`:
@@ -23,14 +23,16 @@ By this package, you don't need to worry about installing CoinUtils in the syste
     extern crate coinutils_src;
     ```
 
-    This package does not provide bindings. Please use [coincbc-sys], [coinclp-sys] to use Cbc, Clp, e.g.
+This package does not provide bindings. Please use [coincbc-sys], [coinclp-sys] to use Cbc, Clp, e.g.
 
-    ```toml
-    [dependencies]
-    coincbc-sys = { version = "0.2" }
-    ```
+```toml
+[dependencies]
+coincbc-sys = { version = "\*" }
+```
 
 ## Configuration
+
+### Environment
 
 The package build from the source and link statically by default. It also provide the following environment variables to allow users to link to system library customly:
 
@@ -80,14 +82,17 @@ you can compile it for the other target by providing the `--target` option to
 |--------------------------------------|:-----------:|
 | `arm-unknown-linux-gnueabi`          | ✓   |
 | `arm-unknown-linux-gnueabihf`        | ✓   |
-| `armv7-linux-androideabi`            | ✓   |
 | `armv7-unknown-linux-gnueabi`        | ✓   |
 | `armv7-unknown-linux-gnueabihf`      | ✓   |
 | `armv7-unknown-linux-musleabi`       | ✓   |
 | `armv7-unknown-linux-musleabihf`     | ✓   |
+| `aarch64-unknown-linux-gnu`          | ✓   |
+| `aarch64-unknown-linux-musl`         | ✓   |
 | `riscv64gc-unknown-linux-gnu`        | ✓   |
-| `x86_64-pc-windows-gnu`              | ✓   |
+| `x86_64-pc-windows-msvc`             | ✓   |
 | `x86_64-unknown-linux-gnu`           | ✓   |
+| `x86_64-unknown-linux-musl`          | ✓   |
+| others                               | not test   |
 
 ## Contribution
 
