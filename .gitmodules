@@ -1,4 +1,3 @@
 [submodule "CoinUtils"]
 	path = CoinUtils
 	url = https://github.com/coin-or/CoinUtils.git
-	branch = releases/2.11.6
