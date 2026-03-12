@@ -6,6 +6,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.10+2.11.12](https://github.com/Maroon502/coinutils-src/compare/v0.2.9+2.11.12...v0.2.10+2.11.12) - 2026-03-12
+
+### Other
+
+- Add gitsubmodule to Dependabot configuration
+- Bump actions/cache from 4 to 5 ([#11](https://github.com/Maroon502/coinutils-src/pull/11))
+- Bump actions/checkout from 4 to 6 ([#10](https://github.com/Maroon502/coinutils-src/pull/10))
+- Bump cc from 1.0 to 1.1
+
 ## [0.2.9+2.11.12](https://github.com/Maroon502/coinutils-src/compare/v0.2.8+2.11.11...v0.2.9+2.11.12) - 2024-08-20
 
 ### Others
